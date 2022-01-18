@@ -1,6 +1,6 @@
 export const getStaticProps = async () => {
   
-  const response = await fetch("http://localhost:3001/")
+  const response = await fetch("http://localhost:3001/farol-da-palavra-api/")
   const data = await response.json();
 
   return({
