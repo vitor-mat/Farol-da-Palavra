@@ -24,7 +24,7 @@ export const getStaticProps = async (context) => {
     })
 }
 
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Resume.module.css'
   
   
 const selectedResumePage = ({ data }) => {
@@ -35,7 +35,13 @@ const selectedResumePage = ({ data }) => {
           <h1 className={styles.headerTitleText}>Farol da Palavra</h1>
         </header>
         <main className={styles.main}>
-          Obrigado por selecionar este resumo
+          <h2 className={styles.resumeTitle}>
+            {`Dia ${data.day} - ${data.title} ${data.subTitle}`}
+          </h2>
+          <p className={styles.resumeContent}>Meu Resumo</p>
+          <div className={styles.resumeFooter}>
+            <span>{data.autor}</span>
+          </div>
         </main>
         <footer className={styles.footer}>
           <span className={styles.footerText}>Made by Vitor M.</span>
