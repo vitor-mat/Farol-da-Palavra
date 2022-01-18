@@ -28,7 +28,7 @@ import styles from '../../styles/Resume.module.css'
   
   
 const selectedResumePage = ({ data }) => {
-  
+
     return (
       <div className={styles.container}>
         <header className={styles.header}>
@@ -36,11 +36,18 @@ const selectedResumePage = ({ data }) => {
         </header>
         <main className={styles.main}>
           <h2 className={styles.resumeTitle}>
-            {`Dia ${data.day} - ${data.title} ${data.subTitle}`}
+            {`Dia ${data.day} - ${data.title}`}
           </h2>
-          <p className={styles.resumeContent}>Meu Resumo</p>
+          <div className={styles.resumeContent}>{
+            data.content.map((value, index) => {
+              return(
+                <span key={index}>{value}</span>
+              )
+            })
+          }
+          </div>
           <div className={styles.resumeFooter}>
-            <span>{data.autor}</span>
+            <span>{data.author}</span>
           </div>
         </main>
         <footer className={styles.footer}>
