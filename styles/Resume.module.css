@@ -79,10 +79,13 @@
 }
 
 .resumeFooter{
+  width: 100%;
+  max-width: 800px;
+  padding-top: 10px;
   font-weight: 700;
   display: flex;
   gap: 20px;
-
+  border-top: 3px solid black;
 }
 
 .resumeFooterDataDiv{
