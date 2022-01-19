@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const getStaticProps = async () => {
   
   const response = await fetch("http://localhost:3001/farol-da-palavra-api/")
@@ -27,7 +29,7 @@ export default function Home({ data }) {
           data.map(({ id, day}) => {
             return(
               <div className={styles.daysItems} key={id}>
-                {day}
+                <Link href={`/resume/${id}`}><a>{day}</a></Link>
               </div>
             )
           })
