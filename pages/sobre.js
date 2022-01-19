@@ -7,7 +7,7 @@ export default function Sobre({ data }) {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.headerTitleText}>Farol da Palavra</h1>
+        <Link href="/"><a><h1 className={styles.headerTitleText}>Farol da Palavra</h1></a></Link>
         <Link href="/sobre"><a className={styles.linkSobreHeader}>Sobre</a></Link>
       </header>
       <main className={styles.main}>
