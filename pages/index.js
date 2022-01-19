@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import styles from '../styles/Home.module.css'
+
 export const getStaticProps = async () => {
   
   const response = await fetch("http://localhost:3001/farol-da-palavra-api/")
@@ -11,9 +13,6 @@ export const getStaticProps = async () => {
 
 }
 
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
 
 export default function Home({ data }) {
