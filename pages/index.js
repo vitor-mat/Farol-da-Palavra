@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export const getStaticProps = async () => {
   
-  const response = await fetch("http://localhost:3001/farol-da-palavra-api/")
+  const response = await fetch(process.env.API_UR)
   const data = await response.json();
 
   return({

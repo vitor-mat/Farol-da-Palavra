@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from '../../styles/Resume.module.css'
 
 export const getStaticPaths = async () => {
-    const response = await fetch("http://localhost:3001/farol-da-palavra-api/");
+    const response = await fetch(process.env.API_UR);
     const data = await response.json();
 
     const paths = data.map(value => {
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id
-    const response = await fetch("http://localhost:3001/farol-da-palavra-api/" + id)
+    const response = await fetch(process.env.API_URL + id)
     const data = await response.json()
 
     return({
