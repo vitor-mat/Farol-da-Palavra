@@ -47,7 +47,16 @@ const selectedResumePage = ({ data }) => {
           }
           </div>
           <div className={styles.resumeFooter}>
-            <span>{data.author}</span>
+            <img className={styles.authorFoto} src="/andre_foto.png" />
+            <div className={styles.resumeFooterDataDiv}>
+              <span>Autor: Mestre André Luiz Ministério de Ensino Paulo Afonso-Ba</span>
+              <div className={styles.resumeFoterDataContactsDiv}>
+                <span>Contatos:</span>
+                <img className={styles.socialMidiaIcons} src="/instagram_icon.png"/>
+                <img className={styles.socialMidiaIcons} src="/facebook_icon.png"/>
+                <img className={styles.socialMidiaIcons} src="/whatsapp_icon.png"/>
+              </div>
+            </div>
           </div>
         </main>
         <footer className={styles.footer}>

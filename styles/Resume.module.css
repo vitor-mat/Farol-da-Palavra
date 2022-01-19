@@ -47,6 +47,50 @@
 
 .resumeFooter{
   font-weight: 700;
+  display: flex;
+  gap: 20px;
+
+}
+
+.resumeFooterDataDiv{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.resumeFoterDataContactsDiv{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media(max-width: 400px){
+  .resumeFoterDataContactsDiv span{
+    width: 100%;
+  }
+}
+
+.resumeFoterDataContactsDiv span{
+  margin-right: 3px;
+}
+
+.socialMidiaIcons{
+  width: 30px;
+  height: 30px;
+  cursor: pointer
+}
+
+.socialMidiaIcons:hover{
+  opacity: .8;
+  transform: scale(1.1);
+}
+
+.authorFoto{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%; 
 }
 
 .footer{
