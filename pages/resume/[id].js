@@ -1,3 +1,7 @@
+import Link from 'next/link';
+
+import styles from '../../styles/Resume.module.css'
+
 export const getStaticPaths = async () => {
     const response = await fetch("http://localhost:3001/farol-da-palavra-api/");
     const data = await response.json();
@@ -23,8 +27,6 @@ export const getStaticProps = async (context) => {
         props: { data }
     })
 }
-
-import styles from '../../styles/Resume.module.css'
   
   
 const selectedResumePage = ({ data }) => {
@@ -52,9 +54,9 @@ const selectedResumePage = ({ data }) => {
               <span>Autor: Mestre André Luiz Ministério de Ensino Paulo Afonso-Ba</span>
               <div className={styles.resumeFoterDataContactsDiv}>
                 <span>Contatos:</span>
-                <img className={styles.socialMidiaIcons} src="/instagram_icon.png"/>
-                <img className={styles.socialMidiaIcons} src="/facebook_icon.png"/>
-                <img className={styles.socialMidiaIcons} src="/whatsapp_icon.png"/>
+                <a href="https://www.instagram.com/mestre.andreluiz/" target="_blank" rel="noreferrer"><img className={styles.socialMidiaIcons} src="/instagram_icon.png"/></a>
+                <a href="https://www.facebook.com/msandreluiz" target="_blank" rel="noreferrer"><img className={styles.socialMidiaIcons} src="/facebook_icon.png"/></a>
+                <a href="https://wa.me/5575992259926" target="_blank" rel="noreferrer"><img className={styles.socialMidiaIcons} src="/whatsapp_icon.png"/></a>
               </div>
             </div>
           </div>
