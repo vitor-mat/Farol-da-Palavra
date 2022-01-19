@@ -19,13 +19,13 @@
   color: white;
 }
 
-.header a{
+.linkSobreHeader{
   color: white;
   font-weight: 700;
   font-size: 18px;
 }
 
-.header a:hover{
+.linkSobreHeader:hover{
   opacity: .7;
   text-decoration: underline;
 }
