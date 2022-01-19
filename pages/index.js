@@ -28,9 +28,7 @@ export default function Home({ data }) {
         {
           data.map(({ id, day}) => {
             return(
-              <div className={styles.daysItems} key={id}>
-                <Link href={`/resume/${id}`}><a>{day}</a></Link>
-              </div>
+                <Link href={`/resume/${id}`} key={id}><a className={styles.daysItems}>{day}</a></Link>
             )
           })
         }
