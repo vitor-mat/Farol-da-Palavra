@@ -62,7 +62,7 @@ const selectedResumePage = ({ data }) => {
           </div>
         </main>
         <footer className={styles.footer}>
-          <span className={styles.footerText}>Made by Vitor M.</span>
+          <span className={styles.footerText}>Made by <a href="https://vitor-mat.github.io/portifolio/" target="_blank" rel="noreferrer">Vitor M.</a></span>
         </footer>
       </div>
     )
