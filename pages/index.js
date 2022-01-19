@@ -22,7 +22,8 @@ export default function Home({ data }) {
         <h1 className={styles.headerTitleText}>Farol da Palavra</h1>
       </header>
       <main className={styles.main}>
-      {
+        <div className={styles.daysContainer}>
+        {
           data.map(({ id, day}) => {
             return(
               <div className={styles.daysItems} key={id}>
@@ -31,6 +32,7 @@ export default function Home({ data }) {
             )
           })
         }
+        </div>
       </main>
       <footer className={styles.footer}>
         <span className={styles.footerText}>Made by Vitor M.</span>
