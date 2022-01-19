@@ -11,11 +11,23 @@
   background: rgb(9, 52, 131);
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .headerTitleText{
   color: white;
+}
+
+.header a{
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.header a:hover{
+  opacity: .7;
+  text-decoration: underline;
 }
 
 
