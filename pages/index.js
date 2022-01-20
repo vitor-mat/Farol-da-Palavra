@@ -2,9 +2,13 @@ import Link from 'next/link';
 
 import styles from '../styles/Home.module.css'
 
+const environment = process.env.DEV_ENVIRONMENT !== "production"
+
+const apiUrl = environment ? "http://localhost:3001/farol-da-palavra-api/" : "https://farol-da-verdade-api.herokuapp.com/farol-da-palavra-api/"
+
 export const getStaticProps = async () => {
   
-  const response = await fetch(process.env.API_UR)
+  const response = await fetch(apiUrl)
   const data = await response.json();
 
   return({
